@@ -18,4 +18,4 @@ for dirname, subfolders, filenames in os.walk(path):
             print(f'READING:\t{filename}')
             df = pd.read_excel(filename, sheet_name="Sheet1", usecols="A:F")
 
-df.info() # Show DataFrame object info:
+df.info() # Show DataFrame object info
