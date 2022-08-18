@@ -16,7 +16,6 @@ for dirname, subfolders, filenames in os.walk(path):
         # Find and read a single spreadsheet into DataFrame:
         if filename.find('xls') != -1:
             print(f'READING:\t{filename}')
-            df = pd.read_excel(filename, sheet_name="Sheet1", skiprows=0, usecols="A:F")
+            df = pd.read_excel(filename, sheet_name="Sheet1", usecols="A:F")
 
-# Show DataFrame object info:
-df.info()
+df.info() # Show DataFrame object info:
