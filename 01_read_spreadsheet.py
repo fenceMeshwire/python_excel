@@ -17,5 +17,9 @@ for dirname, subfolders, filenames in os.walk(path):
         if filename.find('xls') != -1:
             print(f'READING:\t{filename}')
             df = pd.read_excel(filename, sheet_name="Sheet1", usecols="A:F")
+            
+            # Parameters:
+            # sheet_name:   Provides the name of the WorkSheet
+            # usecols:      Indicate the columns, which hold desired data. 
 
 df.info() # Show DataFrame object info
