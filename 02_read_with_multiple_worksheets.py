@@ -17,8 +17,14 @@ for dirname, subfolders, filenames in os.walk(path):
     for filename in filenames:
         if filename.find('xls') != -1:
             with pd.ExcelFile("workbook.xlsx") as f:
+                
                 df1 = pd.read_excel(f, "Sheet1", skiprows=1, usecols="B:F", nrows=2)
                 df2 = pd.read_excel(f, "Sheet2", skiprows=1, usecols="B:F", nrows=2)
-
+                
+                # Parameters:
+                # skiprows: Skip over the indicated number of rows.
+                # usecols:  Indicate the columns, which hold data.
+                # nrows:    Number of rows, which are going to be read.
+                
 print(df1)
 print(df2)
