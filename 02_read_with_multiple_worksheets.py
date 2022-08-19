@@ -23,7 +23,7 @@ for dirname, subfolders, filenames in os.walk(path):
                 
                 # Parameters:
                 # skiprows: Skip over the indicated number of rows.
-                # usecols:  Indicate the columns, which hold data.
+                # usecols:  Indicate the columns, which hold desired data.
                 # nrows:    Number of rows, which are going to be read.
                 
 print(df1)
