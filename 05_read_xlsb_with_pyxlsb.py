@@ -28,11 +28,14 @@ def get_xlsb_workbooks(path):
     return result
                         
 if __name__ == '__main__':
+    
     # Change the current working directory:
-    path = 'C:\\Users\\user\\...}'
+    path = 'C:\\Users\\user\\...'
     os.chdir(path)
+    
     # Obtain a list of all xlsb workbooks
     workbooks = get_xlsb_workbooks(path)
+    
     # Open the first WorkSheet of the first WorkBook
     with pyxlsb.open_workbook(workbooks[0]) as workbook:
         df = pd.read_excel(workbook, 0, engine='pyxlsb')
